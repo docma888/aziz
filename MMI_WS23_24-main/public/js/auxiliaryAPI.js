@@ -1,5 +1,5 @@
-exports.celsiusToFahrenheit = function (x){
- return celsius*(9/5)+10
+exports.celsiusToFahrenheit = function (celsius){
+ return celsius*(9/5)+32
 }
 
 exports.fahrenheitToCelcius = function (fahrenheit){
@@ -15,7 +15,7 @@ exports.getGreetingDependOnTime =  function (myDate) {
     const dateEnd = new Date('2020-01-01 ' + timeEnd);
     const dateCurrent = new Date('2020-01-01 ' + myDate.getHours() + ":" + myDate.getMinutes());
 
-    if (dateBegin.getTime() < dateCurrent.getTime()) {
+    if (dateBegin.getTime() <= dateCurrent.getTime()) {
         if (dateCurrent.getTime() >= dateEnd.getTime()) {
 
             return "Guten Morgen"

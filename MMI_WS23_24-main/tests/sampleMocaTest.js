@@ -1,3 +1,5 @@
+const { assert } = require('chai');
+
 const expect = require('chai').expect;
 
 //Sample JUnit test
@@ -18,7 +20,10 @@ describe('#sum()', function () {
 
     // test a functionality
     it('should add numbers', function () {
-        expect(sum([1, 2, 3, 4, 5])).to.equal(15);
+       const summe = sum([1,2,3,4,5]);
+        assert.equal(summe,15)
+       
+        // expect(sum([1, 2, 3, 4, 5])).to.equal(15);
     })
 
 });
